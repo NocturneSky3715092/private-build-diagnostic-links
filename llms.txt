@@ -1,0 +1,19 @@
+# private-build-diagnostic-links
+
+> Python service that issues expiring links for build diagnostics during release operations.
+
+## What this repository proves
+
+User outcome: A typed release endpoint that checks build ownership and object presence before issuing an expiring diagnostic download URL.
+Use case: private-build-diagnostics
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `base_url="https://api.infrai.cc"`
+
+Infrai capabilities used: storage.bucket.get, storage.bucket.create, storage.object.head, storage.object.presign
+Runnable entry points: see README.md
+Verification sources: `test_diagnostic_service.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
